@@ -7,11 +7,11 @@
     body {
       font-family: Arial;
       margin: 0;
-      background: #f4f6f9;
+      background: linear-gradient(to right, #eef2f3, #d9e4f5);
     }
 
     header {
-      background: #0f2c59;
+      background: #0b2d5c;
       color: white;
       padding: 15px;
       text-align: center;
@@ -28,62 +28,68 @@
       background: url("https://images.unsplash.com/photo-1523240795612-9a054b0db644") center/cover;
       color: white;
       text-align: center;
-      padding: 100px 20px;
+      padding: 110px 20px;
     }
 
     .hero h2 {
-      font-size: 35px;
-      background: rgba(0,0,0,0.5);
+      background: rgba(0,0,0,0.6);
       display: inline-block;
       padding: 10px;
+      border-radius: 10px;
     }
 
     section {
       padding: 40px 20px;
-      background: white;
-      margin: 10px;
-      border-radius: 10px;
     }
 
+    /* SERVICES GRID */
     .services {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 15px;
     }
 
     .card {
-      background: #e8f0ff;
-      padding: 15px;
-      border-radius: 10px;
+      background: white;
+      border-radius: 12px;
+      padding: 10px;
       text-align: center;
-      font-weight: bold;
-      box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: 0.3s;
     }
 
-    .gallery {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
+    .card:hover {
+      transform: scale(1.05);
     }
 
-    .gallery img {
+    .card img {
       width: 100%;
-      max-width: 300px;
+      height: 140px;
+      object-fit: cover;
       border-radius: 10px;
     }
 
-    footer {
-      background: #0f2c59;
-      color: white;
-      text-align: center;
-      padding: 30px;
-      margin-top: 20px;
+    .card p {
+      font-weight: bold;
+      margin-top: 10px;
     }
 
-    .footer-box {
-      max-width: 600px;
-      margin: auto;
-      line-height: 1.8;
+    /* ABOUT */
+    .about {
+      background: white;
+      margin: 10px;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    /* CONTACT */
+    .contact {
+      background: white;
+      margin: 10px;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     }
 
     .whatsapp {
@@ -95,6 +101,14 @@
       text-decoration: none;
       margin-top: 10px;
       font-weight: bold;
+    }
+
+    footer {
+      background: #0b2d5c;
+      color: white;
+      text-align: center;
+      padding: 25px;
+      margin-top: 20px;
     }
   </style>
 </head>
@@ -108,7 +122,6 @@
     <a href="#home">Home</a>
     <a href="#about">About</a>
     <a href="#services">Services</a>
-    <a href="#gallery">Gallery</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
@@ -121,64 +134,88 @@
 
 <!-- ABOUT -->
 <section id="about">
-  <h2>About Us</h2>
-  <p>
-    Welcome to Defense Home Tutor Service. We provide top-quality home tutoring in Lahore, DHA.
-    We specialize in O Level, A Level, MCAT, IELTS, PTE, Math, Physics, Biology and all subjects.
-    Our expert tutors ensure personalized learning and best academic results.
-  </p>
+  <div class="about">
+    <h2>About Us</h2>
+    <p>
+      Welcome to Defense Home Tutor Service. We provide top-quality home tutoring in DHA Lahore.
+      We specialize in O Level, A Level, MCAT, IELTS, PTE, Math, Physics, Biology and all subjects
+      from Grade 1 to FSC. Our expert tutors help students achieve academic excellence.
+    </p>
+  </div>
 </section>
 
 <!-- SERVICES -->
 <section id="services">
-  <h2>Our Services</h2>
+  <h2 style="text-align:center;">Our Services</h2>
 
   <div class="services">
-    <div class="card">Home Tutor</div>
-    <div class="card">Math Tutor</div>
-    <div class="card">Online Tutor</div>
-    <div class="card">O Level Tutor</div>
-    <div class="card">A Level Tutor</div>
-    <div class="card">IELTS Preparation</div>
-    <div class="card">MCAT Coaching</div>
-    <div class="card">Home Tuition DHA</div>
-    <div class="card">All Subjects Support</div>
-  </div>
-</section>
 
-<!-- GALLERY -->
-<section id="gallery">
-  <h2>Our Teaching Environment</h2>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1581091870620-1e7e2b5f0a6c">
+      <p>Home Tutor</p>
+    </div>
 
-  <div class="gallery">
-    <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b">
-    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
-    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1588072432836-e10032774350">
+      <p>Math Tutor</p>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1584697964403-8d1f9f0f5c9a">
+      <p>Online Tutor</p>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644">
+      <p>O Level Tutor</p>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d">
+      <p>A Level Tutor</p>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b">
+      <p>IELTS Prep</p>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1606326608606-aa0b62935f2b">
+      <p>MCAT Coaching</p>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1584697964155-5d8d3a5b5f0f">
+      <p>Home Tuition DHA</p>
+    </div>
+
   </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
-  <h2>Contact Us</h2>
+  <div class="contact">
 
-  <p><b>Business Name:</b> Defense Home Tutor Service</p>
-  <p><b>Email:</b> defensehometutor601@gmail.com</p>
-  <p><b>Phone:</b> 0307 4816551</p>
-  <p><b>Location:</b> DHA Lahore</p>
-  <p><b>Timing:</b> Mon–Sat (24 Hours), Sun Off</p>
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d135090.79037646923!2d74.3583817!3d31.49457915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x21553a564d33710f%3A0x21a0cffc4f17fc3b!2sDefense%20Home%20Tutor%20Service!5e1!3m2!1sen!2s!4v1779586016882!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <h2>Contact Us</h2>
 
-  <a class="whatsapp" href="https://wa.me/923074816551" target="_blank">
-    📲 Chat on WhatsApp
-  </a>
+    <p><b>Business Name:</b> Defense Home Tutor Service</p>
+    <p><b>Email:</b> defensehometutor601@gmail.com</p>
+    <p><b>Phone:</b> 0307 4816551</p>
+    <p><b>Location:</b> DHA Lahore</p>
+    <p><b>Working Hours:</b> Mon–Sat (24 Hours), Sun Off</p>
+
+    <a class="whatsapp" href="https://wa.me/923074816551" target="_blank">
+      📲 Chat on WhatsApp
+    </a>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d135090.79037646923!2d74.3583817!3d31.49457915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x21553a564d33710f%3A0x21a0cffc4f17fc3b!2sDefense%20Home%20Tutor%20Service!5e1!3m2!1sen!2s!4v1779586016882!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
 </section>
 
 <footer>
-  <div class="footer-box">
-    <h3>Defense Home Tutor Service</h3>
-    <p>Best Home Tutor in Lahore for O/A Level, MCAT, IELTS & All Subjects.</p>
-    <p>© 2026 All Rights Reserved</p>
-  </div>
+  <h3>Defense Home Tutor Service</h3>
+  <p>Best Home Tutor Service in Lahore for All Classes & Tests</p>
+  <p>© 2026 All Rights Reserved</p>
 </footer>
 
 </body>
