@@ -5,100 +5,108 @@
 
   <style>
     body {
-      font-family: Arial;
       margin: 0;
-      background: linear-gradient(to right, #eef2f3, #d9e4f5);
+      font-family: 'Segoe UI', sans-serif;
+      background: #0f172a;
+      color: #fff;
     }
 
     /* HEADER */
     header {
-      background: #0b2d5c;
-      color: white;
-      padding: 12px 20px;
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(10px);
+      padding: 15px 25px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
     }
 
     .logo {
-      font-size: 18px;
       font-weight: bold;
+      color: #38bdf8;
+      font-size: 18px;
     }
 
     nav a {
-      color: white;
+      color: #fff;
       margin: 10px;
       text-decoration: none;
-      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #38bdf8;
     }
 
     /* HERO */
     .hero {
-      background: url("https://images.unsplash.com/photo-1523240795612-9a054b0db644") center/cover;
-      color: white;
       text-align: center;
-      padding: 110px 20px;
+      padding: 120px 20px;
+      background: linear-gradient(135deg, #1e3a8a, #0ea5e9);
     }
 
-    .hero h2 {
-      background: rgba(0,0,0,0.6);
-      display: inline-block;
-      padding: 10px;
-      border-radius: 10px;
+    .hero h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
     }
 
+    .hero p {
+      font-size: 18px;
+      opacity: 0.9;
+    }
+
+    /* SECTION */
     section {
-      padding: 40px 20px;
+      padding: 60px 20px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #38bdf8;
+      margin-bottom: 30px;
     }
 
     /* SERVICES */
-    .services {
+    .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 15px;
+      gap: 20px;
     }
 
     .card {
-      background: white;
-      border-radius: 12px;
-      padding: 10px;
-      text-align: center;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 15px;
+      overflow: hidden;
       transition: 0.3s;
     }
 
     .card:hover {
-      transform: scale(1.05);
+      transform: translateY(-5px);
+      border-color: #38bdf8;
     }
 
     .card img {
       width: 100%;
-      height: 140px;
+      height: 150px;
       object-fit: cover;
-      border-radius: 10px;
-      background: #eee;
     }
 
     .card h3 {
-      margin: 10px 0 5px;
+      margin: 10px;
+      color: #38bdf8;
     }
 
     .card p {
-      font-size: 13px;
-      color: #555;
-    }
-
-    /* ABOUT */
-    .box {
-      background: white;
       margin: 10px;
-      border-radius: 12px;
-      padding: 20px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      font-size: 13px;
+      opacity: 0.8;
     }
 
-    /* WHY CHOOSE US */
+    /* WHY US */
     .why {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -106,40 +114,40 @@
     }
 
     .why div {
-      background: white;
-      padding: 15px;
-      border-radius: 10px;
-      box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+      background: rgba(255,255,255,0.05);
+      padding: 20px;
+      border-radius: 12px;
       text-align: center;
-      font-weight: bold;
+      border: 1px solid rgba(255,255,255,0.1);
     }
 
     /* CONTACT */
     .contact {
-      background: white;
-      margin: 10px;
-      border-radius: 12px;
-      padding: 20px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      text-align: center;
+      background: rgba(255,255,255,0.05);
+      padding: 40px;
+      border-radius: 15px;
+      margin: 20px;
     }
 
-    .whatsapp {
+    .btn {
       display: inline-block;
-      background: #25D366;
+      margin-top: 15px;
+      background: #22c55e;
       color: white;
-      padding: 10px 15px;
-      border-radius: 5px;
+      padding: 12px 18px;
+      border-radius: 8px;
       text-decoration: none;
-      margin-top: 10px;
       font-weight: bold;
     }
 
+    /* FOOTER */
     footer {
-      background: #0b2d5c;
-      color: white;
       text-align: center;
       padding: 25px;
-      margin-top: 20px;
+      background: #020617;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      margin-top: 30px;
     }
 
   </style>
@@ -147,13 +155,10 @@
 
 <body>
 
-<!-- HEADER -->
 <header>
   <div class="logo">Defense Home Tutor Service</div>
-
   <nav>
     <a href="#home">Home</a>
-    <a href="#about">About</a>
     <a href="#services">Services</a>
     <a href="#why">Why Us</a>
     <a href="#contact">Contact</a>
@@ -161,90 +166,65 @@
 </header>
 
 <!-- HERO -->
-<section id="home" class="hero">
-  <h2>Best Home Tutor Service in Lahore</h2>
-  <p>O Level | A Level | MCAT | IELTS | Math | Physics | Biology</p>
-</section>
-
-<!-- ABOUT -->
-<section id="about">
-  <div class="box">
-    <h2>About Us</h2>
-    <p>
-      Defense Home Tutor Service provides professional home tutoring in DHA Lahore.
-      We offer expert tutors for O Level, A Level, MCAT, IELTS, PTE, Math, Physics,
-      Biology and all subjects from Grade 1 to FSC. Our focus is quality education
-      and student success.
-    </p>
-  </div>
-</section>
+<div class="hero" id="home">
+  <h1>Best Home Tutor Service in Lahore</h1>
+  <p>O/A Level | MCAT | IELTS | Math | Physics | Biology</p>
+</div>
 
 <!-- SERVICES -->
 <section id="services">
-  <h2 style="text-align:center;">Our Services</h2>
+  <h2>Our Services</h2>
 
-  <div class="services">
+  <div class="grid">
 
     <div class="card">
-      <img src="https://source.unsplash.com/400x300/?teacher,classroom">
+      <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644">
       <h3>Home Tutor</h3>
-      <p>Qualified home tutors for all grades providing personalized learning at your home.</p>
+      <p>Expert tutors available for all classes with personalized home learning.</p>
     </div>
 
     <div class="card">
-      <img src="https://source.unsplash.com/400x300/?math,study">
+      <img src="https://images.unsplash.com/photo-1588072432836-e10032774350">
       <h3>Math Tutor</h3>
-      <p>Expert math tutors helping students improve concepts, problem solving and grades.</p>
+      <p>Strong concept building and exam preparation in mathematics.</p>
     </div>
 
     <div class="card">
-      <img src="https://source.unsplash.com/400x300/?online,learning">
+      <img src="https://images.unsplash.com/photo-1584697964403-8d1f9f0f5c9a">
       <h3>Online Tutor</h3>
-      <p>Interactive online tutoring sessions for flexible and convenient learning anywhere.</p>
+      <p>Flexible online classes with experienced teachers.</p>
     </div>
 
     <div class="card">
-      <img src="https://source.unsplash.com/400x300/?exam,study">
-      <h3>O Level Tutor</h3>
-      <p>Specialized O Level preparation with past papers and exam-focused teaching.</p>
+      <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
+      <h3>O/A Level Tutor</h3>
+      <p>Complete preparation for Cambridge O & A Level exams.</p>
     </div>
 
     <div class="card">
-      <img src="https://source.unsplash.com/400x300/?college,students">
-      <h3>A Level Tutor</h3>
-      <p>Experienced A Level tutors helping students achieve top grades in exams.</p>
+      <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b">
+      <h3>IELTS / Test Prep</h3>
+      <p>IELTS, MCAT, GAT, and entry test preparation experts.</p>
     </div>
 
     <div class="card">
-      <img src="https://source.unsplash.com/400x300/?books,study">
-      <h3>IELTS Prep</h3>
-      <p>Complete IELTS preparation for reading, writing, listening and speaking modules.</p>
-    </div>
-
-    <div class="card">
-      <img src="https://source.unsplash.com/400x300/?medical,study">
-      <h3>MCAT Coaching</h3>
-      <p>MCAT test preparation with strong concept building and practice tests.</p>
-    </div>
-
-    <div class="card">
-      <img src="https://source.unsplash.com/400x300/?home,study">
-      <h3>DHA Tuition</h3>
-      <p>Professional home tuition services available across DHA Lahore area.</p>
+      <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d">
+      <h3>Science Subjects</h3>
+      <p>Physics, Chemistry & Biology tutoring with clear concepts.</p>
     </div>
 
   </div>
 </section>
 
-<!-- WHY CHOOSE US -->
+<!-- WHY US -->
 <section id="why">
-  <h2 style="text-align:center;">Why Choose Us</h2>
+  <h2>Why Choose Us</h2>
 
   <div class="why">
     <div>Experienced Tutors</div>
     <div>Affordable Fees</div>
     <div>24/7 Support</div>
-    <div>Result Oriented Learning</div>
+    <div>Result Oriented</div>
     <div>Home + Online Classes</div>
     <div>Personal Attention</div>
   </div>
@@ -253,24 +233,19 @@
 <!-- CONTACT -->
 <section id="contact">
   <div class="contact">
-
     <h2>Contact Us</h2>
 
-    <p><b>Email:</b> defensehometutor601@gmail.com</p>
-    <p><b>Phone:</b> 0307 4816551</p>
-    <p><b>Location:</b> DHA Lahore</p>
-    <p><b>Timing:</b> Mon–Sat (24 Hours), Sun Off</p>
-
-    <a class="whatsapp" href="https://wa.me/923074816551" target="_blank">
-      📲 Chat on WhatsApp
-    </a>
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d135090.79037646923!2d74.3583817!3d31.49457915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x21553a564d33710f%3A0x21a0cffc4f17fc3b!2sDefense%20Home%20Tutor%20Service!5e1!3m2!1sen!2s!4v1779586016882!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <p>Defense Home Tutor Service</p>
+    <p>defensehometutor601@gmail.com</p>
+    <p>0307 4816551</p>
+    <p>DHA Lahore</p>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d135090.79037646923!2d74.3583817!3d31.49457915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x21553a564d33710f%3A0x21a0cffc4f17fc3b!2sDefense%20Home%20Tutor%20Service!5e1!3m2!1sen!2s!4v1779592522446!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <a class="btn" href="https://wa.me/923074816551">Chat on WhatsApp</a>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
-  <p>© 2026 Defense Home Tutor Service | All Rights Reserved</p>
+  © 2026 Defense Home Tutor Service | All Rights Reserved
 </footer>
 
 </body>
