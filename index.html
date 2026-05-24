@@ -7,12 +7,11 @@
     body {
       font-family: Arial;
       margin: 0;
-      background: #f5f7fa;
-      scroll-behavior: smooth;
+      background: #f4f6f9;
     }
 
     header {
-      background: #1f3c88;
+      background: #0f2c59;
       color: white;
       padding: 15px;
       text-align: center;
@@ -26,10 +25,17 @@
     }
 
     .hero {
-      background: linear-gradient(to right, #1f3c88, #2c6bed);
+      background: url("https://images.unsplash.com/photo-1523240795612-9a054b0db644") center/cover;
       color: white;
       text-align: center;
-      padding: 70px 20px;
+      padding: 100px 20px;
+    }
+
+    .hero h2 {
+      font-size: 35px;
+      background: rgba(0,0,0,0.5);
+      display: inline-block;
+      padding: 10px;
     }
 
     section {
@@ -46,33 +52,49 @@
     }
 
     .card {
-      background: #eef3ff;
+      background: #e8f0ff;
       padding: 15px;
       border-radius: 10px;
       text-align: center;
       font-weight: bold;
+      box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .gallery {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .gallery img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 10px;
     }
 
     footer {
-      background: #1f3c88;
+      background: #0f2c59;
       color: white;
       text-align: center;
-      padding: 15px;
+      padding: 30px;
       margin-top: 20px;
     }
 
-    .contact-box {
+    .footer-box {
+      max-width: 600px;
+      margin: auto;
       line-height: 1.8;
     }
 
-    .btn {
+    .whatsapp {
       display: inline-block;
       background: #25D366;
       color: white;
       padding: 10px 15px;
-      text-decoration: none;
       border-radius: 5px;
+      text-decoration: none;
       margin-top: 10px;
+      font-weight: bold;
     }
   </style>
 </head>
@@ -86,6 +108,7 @@
     <a href="#home">Home</a>
     <a href="#about">About</a>
     <a href="#services">Services</a>
+    <a href="#gallery">Gallery</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
@@ -100,9 +123,9 @@
 <section id="about">
   <h2>About Us</h2>
   <p>
-    Welcome to Defense Home Tutor Service. We provide top-quality home tutoring in Lahore, Pakistan,
-    specializing in O Level, A Level, MCAT, GAT, IELTS, PTE, LCAT test preparation & Math, Physics,
-    Biology and all subjects from Grade 1 to FSC. We ensure personalized learning for academic excellence.
+    Welcome to Defense Home Tutor Service. We provide top-quality home tutoring in Lahore, DHA.
+    We specialize in O Level, A Level, MCAT, IELTS, PTE, Math, Physics, Biology and all subjects.
+    Our expert tutors ensure personalized learning and best academic results.
   </p>
 </section>
 
@@ -112,14 +135,25 @@
 
   <div class="services">
     <div class="card">Home Tutor</div>
-    <div class="card">Math Online Tutor</div>
+    <div class="card">Math Tutor</div>
+    <div class="card">Online Tutor</div>
     <div class="card">O Level Tutor</div>
     <div class="card">A Level Tutor</div>
-    <div class="card">Best Tutor Provider</div>
-    <div class="card">Home Tutor Service</div>
-    <div class="card">Home Tutor Near Me</div>
-    <div class="card">Home Tutor in DHA</div>
-    <div class="card">Home Tuition Services</div>
+    <div class="card">IELTS Preparation</div>
+    <div class="card">MCAT Coaching</div>
+    <div class="card">Home Tuition DHA</div>
+    <div class="card">All Subjects Support</div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <h2>Our Teaching Environment</h2>
+
+  <div class="gallery">
+    <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b">
+    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
+    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644">
   </div>
 </section>
 
@@ -127,21 +161,23 @@
 <section id="contact">
   <h2>Contact Us</h2>
 
-  <div class="contact-box">
-    <p><b>Business Name:</b> Defense Home Tutor Service</p>
-    <p><b>Email:</b> defensehometutor601@gmail.com</p>
-    <p><b>Phone:</b> 0307 4816551</p>
-    <p><b>Location:</b> DHA Lahore</p>
-    <p><b>Working Hours:</b> Mon to Sat (24 Hours), Sun Off</p>
+  <p><b>Business Name:</b> Defense Home Tutor Service</p>
+  <p><b>Email:</b> defensehometutor601@gmail.com</p>
+  <p><b>Phone:</b> 0307 4816551</p>
+  <p><b>Location:</b> DHA Lahore</p>
+  <p><b>Timing:</b> Mon–Sat (24 Hours), Sun Off</p>
 
-    <a class="btn" href="https://wa.me/923074816551" target="_blank">
-      Chat on WhatsApp
-    </a>
-  </div>
+  <a class="whatsapp" href="https://wa.me/923074816551" target="_blank">
+    📲 Chat on WhatsApp
+  </a>
 </section>
 
 <footer>
-  <p>© 2026 Defense Home Tutor Service | All Rights Reserved</p>
+  <div class="footer-box">
+    <h3>Defense Home Tutor Service</h3>
+    <p>Best Home Tutor in Lahore for O/A Level, MCAT, IELTS & All Subjects.</p>
+    <p>© 2026 All Rights Reserved</p>
+  </div>
 </footer>
 
 </body>
